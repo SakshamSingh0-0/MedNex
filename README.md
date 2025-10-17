@@ -1,4 +1,4 @@
-# 🏥 HealthAI+ | AI-Driven Integrated Healthcare Platform
+# 🏥 MedNex | AI-Driven Integrated Healthcare Platform
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success)](https://github.com)
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://github.com)
