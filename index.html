@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthAI+ | AI-Driven Integrated Healthcare Platform</title>
+    <meta name="description" content="Revolutionary AI-powered healthcare platform for personalized medical care, telemedicine, and health management">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for Health Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health<strong>AI+</strong></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-secondary" id="loginBtn">Login</button>
+                <button class="btn-primary" id="signupBtn">Get Started</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>HIPAA Compliant & Secure</span>
+                </div>
+                <h1 class="hero-title">
+                    Your Health, <span class="gradient-text">Powered by AI</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the future of healthcare with our AI-driven integrated platform. 
+                    Get personalized care, instant medical insights, and 24/7 access to healthcare professionals.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" id="getStartedBtn">
+                        <span>Start Your Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-outline btn-large" id="learnMoreBtn">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>50K+</h3>
+                        <p>Active Patients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Doctors</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Satisfaction</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="health-card floating">
+                    <div class="health-card-header">
+                        <i class="fas fa-heart-pulse"></i>
+                        <span>Health Status</span>
+                    </div>
+                    <div class="health-metric">
+                        <div class="metric-circle excellent">
+                            <span>95</span>
+                        </div>
+                        <p>Excellent Health Score</p>
+                    </div>
+                </div>
+                
+                <div class="notification-card floating" style="animation-delay: 0.5s;">
+                    <i class="fas fa-bell"></i>
+                    <div>
+                        <h4>Appointment Reminder</h4>
+                        <p>Dr. Sarah Chen - Tomorrow 10:00 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-check"></i>
+                    <span>HIPAA Certified</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>256-bit Encryption</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>ISO 27001</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Award Winning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Comprehensive Care</span>
+                <h2 class="section-title">Revolutionary Healthcare Features</h2>
+                <p class="section-subtitle">
+                    Cutting-edge AI technology meets compassionate healthcare to deliver 
+                    personalized medical experiences
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-feature="symptom-checker">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Symptom Checker</h3>
+                    <p>Advanced machine learning algorithms analyze your symptoms and provide instant preliminary diagnosis suggestions.</p>
+                    <button class="feature-btn">Try Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="feature-card" data-feature="telemedicine">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Telemedicine Portal</h3>
+                    <p>Connect with healthcare professionals through secure video consultations from anywhere, anytime.</p>
+                    <button class="feature-btn">Book Consultation <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="feature-card" data-feature="health-records">
+                    <div class="feature-icon">
+                        <i class="fas fa-folder-medical"></i>
+                    </div>
+                    <h3>Health Records Vault</h3>
+                    <p>Securely store and access all your medical records, reports, and documents in one encrypted location.</p>
+                    <button class="feature-btn">Access Vault <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="feature-card" data-feature="prescription">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Smart Prescriptions</h3>
+                    <p>Digital prescriptions with automated reminders, drug interaction alerts, and refill management.</p>
+                    <button class="feature-btn">Manage Meds <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="feature-card" data-feature="analytics">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Health Analytics</h3>
+                    <p>Track vital signs, monitor trends, and get personalized insights with beautiful visualizations.</p>
+                    <button class="feature-btn">View Analytics <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="feature-card" data-feature="emergency">
+                    <div class="feature-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Services</h3>
+                    <p>Quick access to emergency contacts, nearest hospitals, and urgent care with real-time location tracking.</p>
+                    <button class="feature-btn">Emergency Info <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Dashboard -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Your Health Hub</span>
+                <h2 class="section-title">Patient Dashboard</h2>
+                <p class="section-subtitle">Complete overview of your health journey in one place</p>
+            </div>
+            
+            <div class="dashboard-container">
+                <!-- Quick Actions -->
+                <div class="dashboard-quick-actions">
+                    <button class="quick-action-btn" data-action="book-appointment">
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Book Appointment</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="check-symptoms">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>Check Symptoms</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="view-records">
+                        <i class="fas fa-file-medical"></i>
+                        <span>Medical Records</span>
+                    </button>
+                    <button class="quick-action-btn" data-action="chat">
+                        <i class="fas fa-comments"></i>
+                        <span>Chat with AI</span>
+                    </button>
+                </div>
+                
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Health Metrics Card -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-heartbeat"></i> Vital Signs</h3>
+                            <span class="time-badge">Last updated: 2 hours ago</span>
+                        </div>
+                        <div class="vital-signs">
+                            <div class="vital-item">
+                                <div class="vital-icon heart-rate">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Heart Rate</span>
+                                    <span class="vital-value">72 <small>bpm</small></span>
+                                    <span class="vital-status normal">Normal</span>
+                                </div>
+                            </div>
+                            <div class="vital-item">
+                                <div class="vital-icon blood-pressure">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Blood Pressure</span>
+                                    <span class="vital-value">120/80 <small>mmHg</small></span>
+                                    <span class="vital-status normal">Normal</span>
+                                </div>
+                            </div>
+                            <div class="vital-item">
+                                <div class="vital-icon temperature">
+                                    <i class="fas fa-thermometer-half"></i>
+                                </div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Temperature</span>
+                                    <span class="vital-value">98.6 <small>°F</small></span>
+                                    <span class="vital-status normal">Normal</span>
+                                </div>
+                            </div>
+                            <div class="vital-item">
+                                <div class="vital-icon oxygen">
+                                    <i class="fas fa-lungs"></i>
+                                </div>
+                                <div class="vital-info">
+                                    <span class="vital-label">Oxygen Level</span>
+                                    <span class="vital-value">98 <small>%</small></span>
+                                    <span class="vital-status normal">Normal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Upcoming Appointments -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-check"></i> Upcoming Appointments</h3>
+                            <button class="btn-text">View All</button>
+                        </div>
+                        <div class="appointments-list" id="appointmentsList">
+                            <div class="appointment-item">
+                                <div class="appointment-date">
+                                    <span class="date-day">15</span>
+                                    <span class="date-month">Dec</span>
+                                </div>
+                                <div class="appointment-details">
+                                    <h4>Dr. Sarah Chen</h4>
+                                    <p><i class="fas fa-user-md"></i> Cardiologist</p>
+                                    <p><i class="fas fa-clock"></i> 10:00 AM - 10:30 AM</p>
+                                </div>
+                                <div class="appointment-actions">
+                                    <button class="btn-icon"><i class="fas fa-video"></i></button>
+                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            <div class="appointment-item">
+                                <div class="appointment-date">
+                                    <span class="date-day">20</span>
+                                    <span class="date-month">Dec</span>
+                                </div>
+                                <div class="appointment-details">
+                                    <h4>Dr. Michael Rodriguez</h4>
+                                    <p><i class="fas fa-user-md"></i> General Physician</p>
+                                    <p><i class="fas fa-clock"></i> 2:00 PM - 2:30 PM</p>
+                                </div>
+                                <div class="appointment-actions">
+                                    <button class="btn-icon"><i class="fas fa-video"></i></button>
+                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Analytics Chart -->
+                    <div class="dashboard-card chart-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Health Trends</h3>
+                            <select class="chart-selector" id="chartSelector">
+                                <option value="heart">Heart Rate</option>
+                                <option value="pressure">Blood Pressure</option>
+                                <option value="weight">Weight</option>
+                                <option value="steps">Daily Steps</option>
+                            </select>
+                        </div>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="healthChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Prescriptions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-pills"></i> Active Prescriptions</h3>
+                            <button class="btn-text">Manage All</button>
+                        </div>
+                        <div class="prescriptions-list" id="prescriptionsList">
+                            <div class="prescription-item">
+                                <div class="prescription-info">
+                                    <h4>Aspirin 75mg</h4>
+                                    <p>Once daily after breakfast</p>
+                                    <div class="prescription-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span>19 days remaining</span>
+                                    </div>
+                                </div>
+                                <button class="reminder-btn active">
+                                    <i class="fas fa-bell"></i>
+                                </button>
+                            </div>
+                            <div class="prescription-item">
+                                <div class="prescription-info">
+                                    <h4>Lisinopril 10mg</h4>
+                                    <p>Twice daily with meals</p>
+                                    <div class="prescription-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 40%"></div>
+                                        </div>
+                                        <span>12 days remaining</span>
+                                    </div>
+                                </div>
+                                <button class="reminder-btn active">
+                                    <i class="fas fa-bell"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Symptom Checker -->
+    <section class="symptom-checker-section" id="symptomChecker">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">AI-Powered Diagnosis</span>
+                <h2 class="section-title">Intelligent Symptom Checker</h2>
+                <p class="section-subtitle">Describe your symptoms and get instant AI-powered health insights</p>
+            </div>
+            
+            <div class="symptom-checker-container">
+                <div class="symptom-checker-visual">
+                    <div class="ai-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="ai-pulse"></div>
+                    </div>
+                    <div class="symptom-features">
+                        <div class="symptom-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>95% Accuracy Rate</span>
+                        </div>
+                        <div class="symptom-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Privacy Protected</span>
+                        </div>
+                        <div class="symptom-feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Instant Results</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="symptom-checker-form">
+                    <div class="symptom-step active" data-step="1">
+                        <h3>What are you experiencing?</h3>
+                        <div class="symptom-input-group">
+                            <label>Select your symptoms:</label>
+                            <div class="symptom-tags" id="symptomTags">
+                                <button class="symptom-tag" data-symptom="headache">
+                                    <i class="fas fa-head-side-cough"></i> Headache
+                                </button>
+                                <button class="symptom-tag" data-symptom="fever">
+                                    <i class="fas fa-temperature-high"></i> Fever
+                                </button>
+                                <button class="symptom-tag" data-symptom="cough">
+                                    <i class="fas fa-lungs"></i> Cough
+                                </button>
+                                <button class="symptom-tag" data-symptom="fatigue">
+                                    <i class="fas fa-tired"></i> Fatigue
+                                </button>
+                                <button class="symptom-tag" data-symptom="nausea">
+                                    <i class="fas fa-dizzy"></i> Nausea
+                                </button>
+                                <button class="symptom-tag" data-symptom="chest-pain">
+                                    <i class="fas fa-heart"></i> Chest Pain
+                                </button>
+                                <button class="symptom-tag" data-symptom="shortness">
+                                    <i class="fas fa-wind"></i> Shortness of Breath
+                                </button>
+                                <button class="symptom-tag" data-symptom="dizziness">
+                                    <i class="fas fa-spinner"></i> Dizziness
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="symptom-input-group">
+                            <label>Additional details:</label>
+                            <textarea id="symptomDetails" placeholder="Describe your symptoms in detail..."></textarea>
+                        </div>
+                        
+                        <button class="btn-primary btn-large" id="analyzeSymptoms">
+                            <span>Analyze Symptoms</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="symptom-results" id="symptomResults" style="display: none;">
+                        <div class="results-header">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h3>Analysis Complete</h3>
+                        </div>
+                        <div class="results-content" id="resultsContent">
+                            <!-- Dynamic results will be inserted here -->
+                        </div>
+                        <div class="results-actions">
+                            <button class="btn-primary" id="bookFromSymptoms">Book Consultation</button>
+                            <button class="btn-secondary" id="checkAgain">Check Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Medical Excellence</span>
+                <h2 class="section-title">Comprehensive Healthcare Services</h2>
+                <p class="section-subtitle">From prevention to treatment, we've got you covered</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Primary Care</h3>
+                        <p>Regular check-ups, preventive care, and health management by experienced physicians.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Annual health screenings</li>
+                            <li><i class="fas fa-check"></i> Chronic disease management</li>
+                            <li><i class="fas fa-check"></i> Vaccination services</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Specialized Care</h3>
+                        <p>Access to specialists across multiple medical disciplines for expert treatment.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Cardiology & heart health</li>
+                            <li><i class="fas fa-check"></i> Orthopedics & sports medicine</li>
+                            <li><i class="fas fa-check"></i> Mental health support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Telemedicine</h3>
+                        <p>Virtual consultations for convenient healthcare access from anywhere.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Video consultations</li>
+                            <li><i class="fas fa-check"></i> E-prescriptions</li>
+                            <li><i class="fas fa-check"></i> Follow-up care</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Lab & Diagnostics</h3>
+                        <p>Comprehensive testing services with fast, accurate results delivered digitally.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Blood work & analysis</li>
+                            <li><i class="fas fa-check"></i> Imaging services</li>
+                            <li><i class="fas fa-check"></i> Home sample collection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services -->
+    <section class="emergency-section" id="emergency">
+        <div class="container">
+            <div class="emergency-container">
+                <div class="emergency-info">
+                    <div class="emergency-badge">
+                        <i class="fas fa-ambulance"></i>
+                        <span>Emergency Services</span>
+                    </div>
+                    <h2>Quick Access When Every Second Counts</h2>
+                    <p>Immediate assistance and location-based emergency care at your fingertips</p>
+                    
+                    <div class="emergency-features">
+                        <div class="emergency-feature">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Emergency Hotline</h4>
+                                <p>Call 911 or our 24/7 emergency line</p>
+                            </div>
+                        </div>
+                        <div class="emergency-feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Nearest Hospital</h4>
+                                <p>Find nearby emergency rooms instantly</p>
+                            </div>
+                        </div>
+                        <div class="emergency-feature">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <h4>Medical Profile</h4>
+                                <p>Quick access to your medical information</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-emergency" id="emergencyBtn">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Access Emergency Services</span>
+                    </button>
+                </div>
+                
+                <div class="emergency-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-hospital"></i>
+                        <p>Interactive hospital map will load here</p>
+                        <div class="nearby-hospitals">
+                            <h4>Nearby Hospitals:</h4>
+                            <div class="hospital-item">
+                                <i class="fas fa-hospital-alt"></i>
+                                <div>
+                                    <h5>City General Hospital</h5>
+                                    <p>0.8 miles away • Emergency open</p>
+                                </div>
+                            </div>
+                            <div class="hospital-item">
+                                <i class="fas fa-hospital-alt"></i>
+                                <div>
+                                    <h5>St. Mary's Medical Center</h5>
+                                    <p>1.2 miles away • Emergency open</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Patient Stories</span>
+                <h2 class="section-title">Trusted by Thousands</h2>
+                <p class="section-subtitle">Real experiences from real people</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "HealthAI+ has transformed how I manage my diabetes. The AI insights and medication reminders 
+                        have helped me maintain better control over my health. Truly revolutionary!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>John Martinez</h4>
+                            <p>Patient since 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "As a working mom, the telemedicine feature is a lifesaver. I can consult with doctors 
+                        without taking time off work. The symptom checker is incredibly accurate too!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Patient since 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The health analytics dashboard helps me track my fitness progress. Having all my medical 
+                        records in one secure place gives me peace of mind. Excellent platform!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Michael Chen</h4>
+                            <p>User & Healthcare Provider</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">About HealthAI+</span>
+                    <h2>Pioneering the Future of Healthcare</h2>
+                    <p>
+                        HealthAI+ is more than just a healthcare platform—it's a revolution in how people 
+                        access and manage their health. Founded by a team of healthcare professionals, AI experts, 
+                        and patient advocates, we're committed to making quality healthcare accessible to everyone.
+                    </p>
+                    <p>
+                        Our mission is to empower individuals with the tools and knowledge they need to take 
+                        control of their health journey. Through cutting-edge AI technology and compassionate 
+                        human care, we're building a healthier future for all.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <h3>50,000+</h3>
+                            <p>Active Patients</p>
+                        </div>
+                        <div class="about-stat">
+                            <h3>1,000+</h3>
+                            <p>Healthcare Providers</p>
+                        </div>
+                        <div class="about-stat">
+                            <h3>500K+</h3>
+                            <p>Consultations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="about-card card-1">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Award Winning</h4>
+                        <p>Best Healthcare Innovation 2024</p>
+                    </div>
+                    <div class="about-card card-2">
+                        <i class="fas fa-users"></i>
+                        <h4>Expert Team</h4>
+                        <p>200+ Medical Professionals</p>
+                    </div>
+                    <div class="about-card card-3">
+                        <i class="fas fa-globe"></i>
+                        <h4>Global Reach</h4>
+                        <p>Serving 50+ Countries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions? We're here to help. Reach out to our team anytime.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>1-800-HEALTH-AI</p>
+                                <p>24/7 Support Available</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>support@healthaiplus.com</p>
+                                <p>Response within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>123 Healthcare Blvd</p>
+                                <p>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-info">
+                <h4>HealthAI Assistant</h4>
+                <span class="chatbot-status">Online</span>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your HealthAI assistant. How can I help you today?</p>
+                    <div class="quick-replies">
+                        <button class="quick-reply">Book Appointment</button>
+                        <button class="quick-reply">Check Symptoms</button>
+                        <button class="quick-reply">View Records</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type your message...">
+            <button class="btn-send" id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="chatbot-trigger" id="chatbotTrigger">
+        <i class="fas fa-comments"></i>
+        <span class="chat-badge">1</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health<strong>AI+</strong></span>
+                    </div>
+                    <p>Revolutionizing healthcare through AI-powered solutions. Your health, our priority.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Telemedicine</a></li>
+                        <li><a href="#">Symptom Checker</a></li>
+                        <li><a href="#">Health Records</a></li>
+                        <li><a href="#">Prescriptions</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with health tips and news</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 HealthAI+. All rights reserved. | Empowering healthier lives worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heartbeat"></i>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
